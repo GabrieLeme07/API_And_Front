@@ -1,0 +1,22 @@
+<div class="container main-container">
+  <form>
+    <div class="form-row">
+      <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="file"></label>
+          <input
+            #excelInput
+            type="file"
+            id="file"
+            name="file"
+            (change)="onFileChange($event)"
+            accept=".xlsx"
+          />
+        </div>
+      </form>
+    </div>
+    <button type="submit" (click)="uploadFile()" class="btn btn-primary">
+      Importar
+    </button>
+  </form>
+</div>

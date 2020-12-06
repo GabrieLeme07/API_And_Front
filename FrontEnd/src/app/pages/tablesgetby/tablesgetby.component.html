@@ -1,0 +1,20 @@
+<div class="container main-container">
+  <table #tableI class="table">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">
+          {{ head | titlecase }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let el of data">
+        <th scope="row">{{ el.dataEntrega | date: "dd/MM/yyyy" }}</th>
+        <td class="red-text">{{ el.descricaoProduto }}</td>
+        <td>{{ el.valorUnitario }}</td>
+        <td>{{ el.qtdProduto }}</td>
+        <td>{{ el.vlTotal | currency: "R$" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

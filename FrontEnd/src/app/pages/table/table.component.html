@@ -1,0 +1,32 @@
+<div class="container main-container">
+  <div class="form-inline">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Digite o ID"
+      [(ngModel)]="idConsulta"
+    />
+    <button type="button" class="btn btn-primary" (click)="onClickGetById()">
+      Consulta By ID
+    </button>
+  </div>
+  <table #tableI class="table">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">
+          {{ head | titlecase }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let el of importacoes">
+        <th scope="row">{{ el.id }}</th>
+        <td class="red-text">{{ el.dataImportacao | date: "dd/MM/yyyy" }}</td>
+        <td>{{ el.numeroRegistros }}</td>
+        <td>{{ el.numeroTotalProdutos }}</td>
+        <td>{{ el.valorTotalImportado | currency: "R$" }}</td>
+        <td>{{ el.menorDataEntrega | date: "dd/MM/yyyy" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
