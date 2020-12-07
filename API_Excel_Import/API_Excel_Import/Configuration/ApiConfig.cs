@@ -65,8 +65,6 @@ namespace API_Excel_Import.Configuration
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseStaticFiles();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
