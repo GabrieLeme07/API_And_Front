@@ -31,16 +31,14 @@ namespace API_Excel_Import.Controllers
         private readonly ILoteService _loteService;
 
         private readonly IMapper _mapper;
-        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public ImportacaoController(IExcelDataRepository excelDataRepository, IExcelDataService excelDataService, ILoteRepository loteRepository, ILoteService loteService, IMapper mapper, IHostingEnvironment hostingEnvironment)
+        public ImportacaoController(IExcelDataRepository excelDataRepository, IExcelDataService excelDataService, ILoteRepository loteRepository, ILoteService loteService, IMapper mapper)
         {
             _excelDataRepository = excelDataRepository;
             _excelDataService = excelDataService;
             _loteRepository = loteRepository;
             _loteService = loteService;
             _mapper = mapper;
-            _hostingEnvironment = hostingEnvironment;
         }
 
 

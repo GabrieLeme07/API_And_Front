@@ -17,9 +17,6 @@ namespace API_Excel_Import.Configuration
 
             services.AddScoped<IExcelDataService, ExcelDataService>();
             services.AddScoped<ILoteService, LoteService>();
-
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-
             return services;
         }
     }
