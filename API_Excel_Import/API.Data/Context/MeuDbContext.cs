@@ -14,10 +14,7 @@ namespace API.Data.Context
         {
             //Registra todas as classes
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(MeuDbContext).Assembly);
-
-            OnModelCreatingPartial(modelBuilder);
         }
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
